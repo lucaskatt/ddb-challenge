@@ -22,8 +22,7 @@ namespace DdbChallenge.Bll
 		public Character Create(Character character)
 		{
 			//could add validation in here for all of the fields if this were a real project
-			//force stats, resistances, classes, etc. to be enums
-			//make sure attacks, heals, temphp are all positive
+			//force stats, resistances, classes, etc. to be within specific values
 
 			int maxHp = 0;
 
@@ -60,6 +59,8 @@ namespace DdbChallenge.Bll
 
 		public Character Attack(Character character, Attack attack)
 		{
+      //could verify that damage is positive here if that were a requirement
+
 			int damage = attack.Damage;
 
 			//keeping this simple by ignoring the case where the character has multiple defenses for the same type
